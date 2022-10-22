@@ -8,15 +8,19 @@ import {
   StatusBar,
   TextInput,
 } from "react-native";
-import { Icon } from "react-native-elements";
+import { Icon, Button, SocialIcon } from "react-native-elements";
 import Header from "../../components/Header";
-import { colors } from "../../global/styles";
+import { colors, parameters } from "../../global/styles";
 import SignUpForm from "react-native-signup-form";
 
 export default function SigninScreen() {
   const [visibilityPassword, setVisibilityPassword] = useState(false);
   const inputEmail = useRef(1);
   const inputPassword = useRef(2);
+
+  function toggleVisibility() {
+    setVisibilityPassword(!visibilityPassword);
+  }
 
   return (
     <View style={styles.container}>
@@ -126,26 +130,95 @@ export default function SigninScreen() {
                 placeholder="Password"
                 className="inputPassword"
                 type="password"
-                style={{  }}
               />
-              {/* <div >
+              <div>
                 <Icon
                   name="visibility-off"
                   iconStyle={{ color: colors.grey3 }}
                   type="material"
                   style={{ marginRight: 10 }}
                   ref={inputPassword}
-                  onFocus={() => {
-                    setVisibilityPassword(false);
+                  onPress={() => {
+                    toggleVisibility();
                   }}
-                  onBlur={() => {
-                    setVisibilityPassword(true);
-                  }}
+                  // onFocus={() => {
+                  //   setVisibilityPassword(false);
+                  // }}
+                  // onBlur={() => {
+                  //   setVisibilityPassword(true);
+                  // }}
                 />
-              </div> */}
+              </div>
             </div>
           </div>
         </form>
+      </View>
+
+      <View style={{ marginHorizontal: 20, marginTop: 30 }}>
+        <Button
+          title="SIGN IN"
+          buttonStyle={parameters.styledButton}
+          titleStyle={parameters.buttonTitleStyle}
+        />
+      </View>
+      <View style={{ alignItems: "center ", marginTop: 15 }}>
+        <Text
+          style={{
+            ...styles.text1,
+            textDecorationLine: "underline",
+            cursor: "pointer",
+          }}
+        >
+          Forgot Password?
+        </Text>
+      </View>
+      <View style={{ alignItems: "center", marginTop: 20, marginBottom: 20 }}>
+        <Text
+          style={{
+            fontSize: 20,
+            fontWeight: "bold",
+            cursor: "pointer",
+          }}
+        >
+          OR
+        </Text>
+      </View>
+      <View style={{ cursor: "pointer", marginHorizontal: 10 }}>
+        <SocialIcon
+          title="Sign In With Facebook"
+          button
+          type="facebook"
+          style={styles.socialIcon}
+          onPress={() => {}}
+        />
+      </View>
+      <View style={{ cursor: "pointer", marginHorizontal: 10 }}>
+        <SocialIcon
+          title="Sign In With Google"
+          button
+          type="google"
+          style={styles.socialIcon}
+          onPress={() => {}}
+        />
+      </View>
+
+      <View style={{ alignItems: "center", marginTop: 20, marginBottom: 20 }}>
+        <Text
+          style={{
+            fontSize: 20,
+            fontWeight: "bold",
+          }}
+        >
+          New here?
+          <Button
+            title="Create an account"
+            buttonStyle={[
+              parameters.styledButton,
+              parameters.buttonTitleStyle,
+              { cursor: "pointer", marginHorizontal: 20 },
+            ]}
+          />
+        </Text>
       </View>
     </View>
   );
@@ -157,6 +230,7 @@ const styles = StyleSheet.create({
   },
   text1: {
     color: colors.grey3,
+    fontSize: 16,
   },
   TextInput1: {
     borderWidth: 1,
@@ -179,5 +253,9 @@ const styles = StyleSheet.create({
     height: 30,
 
     // paddingLeft: 15,
+  },
+  socialIcon: {
+    borderRadius: 12,
+    height: 50,
   },
 });

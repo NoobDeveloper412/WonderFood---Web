@@ -13,9 +13,28 @@ const colors = {
 
 const parameters = {
   headerHeight: 45,
+  styledButton: {
+    backgroundColor: "#ff8c52",
+    alignContent: "center",
+    justifyContent: "center",
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "#ff8c62",
+    height: 50,
+    paddingHorizontal: 20,
+    width: "100%",
+  },
+  buttonTitleStyle: {
+    alignContent: "center",
+    justifyContent: "center",
+    color: "white",
+    fontSize: 20,
+    fontWeight: "bold",
+    marginTop: -3,
+  },
 };
 
 const StatusBar = {
-  color:"#ff8c52",
-}
+  color: "#ff8c52",
+};
 export { colors, parameters };
