@@ -8,14 +8,14 @@ import {
 } from "react-native";
 import { colors, parameters } from "../global/styles";
 import { Icon } from "react-native-elements";
-export default function Header({ title }) {
+export default function Header({ title, type }) {
   return (
     <View style={styles.header}>
       <View style={{ marginLeft: 20 }}>
         <TouchableOpacity>
           <Icon
             type="material-community"
-            name="arrow-left"
+            name={type}
             color={colors.headerText}
             style={28}
             onPress={() => {}}

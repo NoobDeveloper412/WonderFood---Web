@@ -1,22 +1,24 @@
-import React from 'react'
-import {View, StatusBar, StyleSheet} from 'react-native'
-import Header from './src/components/Header';
-import { colors } from './src/global/styles';
-function App() {
+import React from "react";
+import { View, StatusBar, StyleSheet } from "react-native";
+import { colors } from "react-native-elements";
+import SigninScreen from "./src/screens/authentication/SigninScreen";
+import './src/global/style.css' 
+
+export default function App() {
   return (
-    <View style={styles.container}>
+    <View style={style.container}>
       <StatusBar
-      barStyle='light-content'
-      backgroundColor={colors.statusBar}
+        barStyle="light-content"
+        backgroundColor={colors.StatusBar}
       />
-      <Header title= 'My Account'/>
+      <SigninScreen />
     </View>
   );
 }
 
-const styles  = StyleSheet.create({
+
+const style = StyleSheet.create({
   container:{
     flex:1
   }
 })
-export default App

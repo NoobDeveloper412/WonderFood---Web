@@ -15,4 +15,7 @@ const parameters = {
   headerHeight: 45,
 };
 
+const StatusBar = {
+  color:"#ff8c52",
+}
 export { colors, parameters };

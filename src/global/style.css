@@ -1,0 +1,38 @@
+.signupForm{
+    display: flex;
+    flex-direction: column;
+
+}
+.emailDiv{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:10px 10px;
+    border: 2px solid grey;
+    border-radius: 100px;
+}
+.inputEmail{
+    border: none;
+    background: none;
+    outline: none;
+}
+.inputIconContainer{
+    padding: 2px 6px;
+    
+}
+.passwordDiv{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0px 10px;
+    border: 2px solid grey;
+    border-radius: 100px;
+}
+.inputPassword{
+    border: none;
+    outline: none;
+    width: 80%;
+    background: none;
+}
