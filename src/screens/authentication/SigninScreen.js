@@ -11,7 +11,6 @@ import {
 import { Icon, Button, SocialIcon } from "react-native-elements";
 import Header from "../../components/Header";
 import { colors, parameters } from "../../global/styles";
-import SignUpForm from "react-native-signup-form";
 
 export default function SigninScreen() {
   const [visibilityPassword, setVisibilityPassword] = useState(false);

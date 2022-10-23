@@ -36,3 +36,13 @@
     width: 60%;
     background: none;
 }
+.SigninWelcomeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    flex:1
+}
+.welcomeTitle{
+    flex:3
+}
